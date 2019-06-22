@@ -4,10 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="2019你还要做的有很多, 梧桐非">
-    <meta name="description" content="2019给自己定个目标吧哈哈。。。。
-javascriptjs语言是是世界上最好的语言。。。
-">
+    <meta name="keywords" content="this指向, 梧桐非">
+    <meta name="description" content="关于this的总结&amp;lt;script&gt;
+    //全局环境 和 普通函数中this指的是是windows
+    console.log(this) //windows
+    function abc() {
+        cons">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +17,7 @@ javascriptjs语言是是世界上最好的语言。。。
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>2019你还要做的有很多 | 梧桐非</title>
+    <title>this指向 | 梧桐非</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -259,13 +261,13 @@ javascriptjs语言是是世界上最好的语言。。。
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        2019你还要做的有很多
+                        this指向
                     </div>
                 </div>
             </div>
@@ -374,12 +376,25 @@ javascriptjs语言是是世界上最好的语言。。。
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/js/" target="_blank">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/javaScript/" class="post-category" target="_blank">
+                                javaScript
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -387,14 +402,14 @@ javascriptjs语言是是世界上最好的语言。。。
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-02
+                    2019-06-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        24
+                        394
                     </div>
                     
 
@@ -417,8 +432,104 @@ javascriptjs语言是是世界上最好的语言。。。
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="2019给自己定个目标吧"><a href="#2019给自己定个目标吧" class="headerlink" title="2019给自己定个目标吧"></a>2019给自己定个目标吧</h4><p>哈哈。。。。</p>
-<h4 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h4><p>js语言是是世界上最好的语言。。。</p>
+                <h4 id="关于this的总结"><a href="#关于this的总结" class="headerlink" title="关于this的总结"></a>关于this的总结</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">//全局环境 和 普通函数中this指的是是windows</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//windows</span>
+    <span class="token keyword">function</span> <span class="token function">abc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//windows</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">abc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//事件中的this是被侦听的对象 document</span>
+    document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span>clickHander<span class="token punctuation">)</span>
+    <span class="token keyword">function</span> <span class="token function">clickHander</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//document</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//对象方法中的this 指的是当前的函数所在的对象</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+        a<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+        b<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    obj<span class="token punctuation">.</span><span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//obj</span>
+    <span class="token keyword">var</span> obj2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+    obj2<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">"zhang san"</span>
+    obj2<span class="token punctuation">.</span><span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// obj2  原型链继承</span>
+    <span class="token comment" spellcheck="true">//构造函数中this指代的是new出来的对象</span>
+    <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    Person<span class="token punctuation">.</span>prototype<span class="token operator">=</span><span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span><span class="token string">"li si"</span><span class="token punctuation">,</span>
+        age<span class="token punctuation">:</span><span class="token string">"18"</span><span class="token punctuation">,</span>
+        c<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">===</span>one<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    one <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    one<span class="token punctuation">.</span><span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//构造函数es6 this指代的也是new出来的对象</span>
+    <span class="token keyword">class</span> <span class="token class-name">Ball</span><span class="token punctuation">{</span>
+        <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token function">paly</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">===</span>ball<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    ball <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Ball</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ball<span class="token punctuation">.</span><span class="token function">paly</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//call apply bind  绑定this 混入模式 对象混入到函数中</span>
+    <span class="token keyword">function</span> <span class="token function">bindHander</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token operator">=</span>a<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>b<span class="token operator">=</span>b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">bindHander</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>b<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 3 5 this 指的是windows会为windows增加两个变量a和b</span>
+
+    <span class="token keyword">var</span> objs <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    bindHander<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>objs<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objs<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// this 指的是objs 并且增加两个属性a b 值为 3 5 </span>
+
+    bindHander<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>objs<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//接受两个参数 且第二个必须是数组</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objs<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// this 指的是objs 并且增加两个属性a b 值为 3 5 </span>
+
+    bindHander<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>objs<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objs<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// this 指的是objs 并且增加两个属性a b 值为 3 5</span>
+    <span class="token comment" spellcheck="true">//闭包中的this</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"windows"</span>
+    <span class="token keyword">var</span> object <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span><span class="token string">"object"</span><span class="token punctuation">,</span>
+        getName<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// windows</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"windows"</span>
+    <span class="token keyword">var</span> object <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span><span class="token string">"object"</span><span class="token punctuation">,</span>
+        getName<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">var</span> _this<span class="token operator">=</span><span class="token keyword">this</span>
+            <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> _this<span class="token punctuation">.</span>name
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// object</span>
+
+    <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"windows"</span>
+    <span class="token keyword">var</span> object <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span><span class="token string">"object"</span><span class="token punctuation">,</span>
+        getName<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name     
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// object</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>object<span class="token punctuation">.</span>getName<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// object</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 
             </div>
             <hr>
@@ -574,9 +685,9 @@ javascriptjs语言是是世界上最好的语言。。。
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《2019你还要做的有很多》
+                    《this指向》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/02/first/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/22/this-zhi-xiang/" property="cc:attributionName" rel="cc:attributionURL">
                 梧桐非
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
@@ -617,7 +728,62 @@ javascriptjs语言是是世界上最好的语言。。。
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/06/22/this-zhi-xiang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="this指向">
+                        
+                        <span class="card-title">this指向</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            关于this的总结&lt;script>
+    //全局环境 和 普通函数中this指的是是windows
+    console.log(this) //windows
+    function abc() {
+        cons
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javaScript/" class="post-category" target="_blank">
+                                    javaScript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/06/09/js-sui-ji-yan-se/">
                     <div class="card-image">
@@ -638,9 +804,9 @@ javascriptjs语言是是世界上最好的语言。。。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -660,43 +826,6 @@ javascriptjs语言是是世界上最好的语言。。。
                         <span class="chip bg-color">js</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/06/02/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            梧桐非
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
