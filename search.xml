@@ -5,6 +5,19 @@
     
     <entry>
       <title></title>
+      <link href="/2019/11/17/qing-chu-fu-dong/"/>
+      <url>/2019/11/17/qing-chu-fu-dong/</url>
+      
+        <content type="html"><![CDATA[<h4 id="清除浮动方法"><a href="#清除浮动方法" class="headerlink" title="清除浮动方法"></a>清除浮动方法</h4><ul><li>父级div定义伪类</li></ul><pre><code>div:{display:block;clear:both;content:&quot;&quot;;visibility:hidden;height:0}div:{zoom:1}</code></pre><ul><li><p>父级div定义</p><pre><code>overflow:hidden</code></pre></li><li><p>父级div定义</p></li></ul><pre><code>  overflow:auto</code></pre><ul><li><p>父级div定义高度</p></li><li><p>给结尾加空的div</p><pre><code>clear:both</code></pre></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/"/>
       <url>/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/</url>
       
