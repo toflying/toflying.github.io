@@ -4,8 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 梧桐非">
-    <meta name="description" content="分类 | 梧桐非">
+    <meta name="keywords" content="梧桐非">
+    <meta name="description" content="常见的水平垂直居中方法
+先给父级元素设置水平居中
+text-align:center在给当前垂直的元素转换成行内块元素和垂直居中
+display:inline-block;
+vertical-align:middle在元素的后面不要回车，加">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分类 | 梧桐非</title>
+    <title>梧桐非</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -257,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        categories
+                        
                     </div>
                 </div>
             </div>
@@ -385,14 +389,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-03
+                    2019-11-17
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        0
+                        231
                     </div>
                     
 
@@ -415,7 +419,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="常见的水平垂直居中方法"><a href="#常见的水平垂直居中方法" class="headerlink" title="常见的水平垂直居中方法"></a>常见的水平垂直居中方法</h4><ol>
+<li><p>先给父级元素设置水平居中</p>
+<pre><code>text-align:center</code></pre><p>在给当前垂直的元素转换成行内块元素和垂直居中</p>
+<pre><code>display:inline-block;
+vertical-align:middle</code></pre><p>在元素的后面不要回车，加上同级元素span，进行设置此参照物的高度等于父级元素100%</p>
+<pre><code>display:inline-block;
+vertical-align:middle;
+height:100%</code></pre></li>
+<li><p>相对定位加绝对定位，父元素加相对定位，子元素加绝对定位</p>
+<pre><code>left:0;
+right:0;
+top:0;
+bottom:0;
+position:absolute</code></pre><p>3.弹性盒</p>
+<pre><code>display:flex  //父元素
+margin:auto   //子元素</code></pre><p>4.弹性盒2  直接给父级元素设置就可以了</p>
+<pre><code>display:flex;
+justifly-content:center;
+align-items:center</code></pre><h5 id="窗口居中，固定定位"><a href="#窗口居中，固定定位" class="headerlink" title="窗口居中，固定定位"></a>窗口居中，固定定位</h5></li>
+</ol>
+<p>1.居中元素</p>
+<pre><code>position:fixed;
+left:50%;
+top:50%;
+margin-left://定位元素高度一半，负值
+margin-top://定位元素高度一半，负值</code></pre><p>2.居中元素</p>
+<pre><code>position:fixed;
+left:0;
+right:0;
+top:0;
+bottom:0;
+margin:auto;</code></pre>
             </div>
             <hr>
 
@@ -570,9 +605,9 @@
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《categories》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/categories/index.html" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/" property="cc:attributionName" rel="cc:attributionURL">
                 梧桐非
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
@@ -616,24 +651,28 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt>
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            常见的水平垂直居中方法
+先给父级元素设置水平居中
+text-align:center在给当前垂直的元素转换成行内块元素和垂直居中
+display:inline-block;
+vertical-align:middle在元素的后面不要回车，加
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-17
                             </span>
                         <span class="publish-author">
                             
@@ -651,37 +690,52 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2019/06/22/this-zhi-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="this指向">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">this指向</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            关于this的总结&lt;script>
+    //全局环境 和 普通函数中this指的是是windows
+    console.log(this) //windows
+    function abc() {
+        cons
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            梧桐非
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javaScript/" class="post-category" target="_blank">
+                                    javaScript
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

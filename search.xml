@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/"/>
+      <url>/2019/11/17/shui-ping-chui-zhi-de-ji-chong-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<h4 id="常见的水平垂直居中方法"><a href="#常见的水平垂直居中方法" class="headerlink" title="常见的水平垂直居中方法"></a>常见的水平垂直居中方法</h4><ol><li><p>先给父级元素设置水平居中</p><pre><code>text-align:center</code></pre><p>在给当前垂直的元素转换成行内块元素和垂直居中</p><pre><code>display:inline-block;vertical-align:middle</code></pre><p>在元素的后面不要回车，加上同级元素span，进行设置此参照物的高度等于父级元素100%</p><pre><code>display:inline-block;vertical-align:middle;height:100%</code></pre></li><li><p>相对定位加绝对定位，父元素加相对定位，子元素加绝对定位</p><pre><code>left:0;right:0;top:0;bottom:0;position:absolute</code></pre><p>3.弹性盒</p><pre><code>display:flex  //父元素margin:auto   //子元素</code></pre><p>4.弹性盒2  直接给父级元素设置就可以了</p><pre><code>display:flex;justifly-content:center;align-items:center</code></pre><h5 id="窗口居中，固定定位"><a href="#窗口居中，固定定位" class="headerlink" title="窗口居中，固定定位"></a>窗口居中，固定定位</h5></li></ol><p>1.居中元素</p><pre><code>position:fixed;left:50%;top:50%;margin-left://定位元素高度一半，负值margin-top://定位元素高度一半，负值</code></pre><p>2.居中元素</p><pre><code>position:fixed;left:0;right:0;top:0;bottom:0;margin:auto;</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>this指向</title>
       <link href="/2019/06/22/this-zhi-xiang/"/>
       <url>/2019/06/22/this-zhi-xiang/</url>
